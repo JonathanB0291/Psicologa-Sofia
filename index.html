@@ -30,62 +30,64 @@
   <!-- HERO / PRESENTACIÓN -->
   <section id="inicio" class="hero">
     <div class="hero-content">
-      <h2>Te acompaño en tu camino de bienestar emocional</h2>
-      <p>Espacios de escucha, contención y crecimiento personal.</p>
+      <h2>Espacio analítico de exploración y construcción de tu proyecto más importante.</h2> 
+      <h2>VOS MISMO</h2>
     </div>
   </section>
 
   <!-- SOBRE MÍ -->
   <section id="sobre-mi" class="section about">
     <h2>Sobre mí</h2>
-    <p>Soy Licenciada en Psicología (MP xxxx), con experiencia en el abordaje de problemáticas emocionales y relacionales. Trabajo desde un enfoque integrador centrado en la persona.</p>
+    <p>Soy psicologa MP 356 diplomada en orientación vocacional y ocupacional.
+      <br>Actualmente trabajo en modalidad virtual con orientación psicoanalítica atendiendo a jóvenes y adultos. 
+      <br>Hace un año y dos meses me encuentro viviendo en Portugal🌎.
+      <br>Me di el lugar de frenar y disfrutar de lo simple para apostar a mis proyectos. Dejé a un costado el piloto automático en el que andaba y me dispuse a vivir sin tanta prisa y más consciente de lo que quiero y adónde quiero estar..</p>
   </section>
 
   <!-- ESPECIALIDADES -->
   <section id="especialidades" class="section specialties">
-    <h2>Especialidades</h2>
+    <h2>Experiencia Laboral</h2>
     <div class="cards">
       <a href="#ansiedad" class="card">
-        <h3>Ansiedad</h3>
-        <p>Aprendé a gestionar los síntomas físicos y mentales que generan malestar diario.</p>
-      </a>
-      <a href="#autoestima" class="card">
-        <h3>Autoestima</h3>
-        <p>Fortalecé tu valor personal y construí una relación más amorosa con vos misma/o.</p>
+        <h3>Clinica con niños y adolescentes</h3>
       </a>
       <a href="#duelo" class="card">
-        <h3>Duelo</h3>
-        <p>Acompañamiento respetuoso en procesos de pérdida y reconstrucción emocional.</p>
+        <h3>Clinica con jovenes y adultos</h3>
       </a>
       <a href="#online" class="card">
-        <h3>Terapia Online</h3>
-        <p>Un espacio cálido y profesional desde la comodidad de tu casa.</p>
+        <h3>Orientación y Re-Orientacion vocacional </h3>
+      </a>
+      <a href="#autoestima" class="card">
+        <h3>Orientacion a padres</h3>
       </a>
     </div>
   </section>
 
-  <!-- FORMULARIO DE CONTACTO -->
-  <section id="contacto" class="section contact">
+  <!-- CALENDARIO y FORMULARIO -->
+<section id="calendario" class="section calendario-citas">
+  <div class="calendario-wrapper">
+    <h2>Elegí el mejor momento para tu sesión</h2>
+    <p class="calendario-subtext">Reservá tu cita con anticipación. Elegí la fecha y hora que mejor se adapte a vos.</p>
+    <div id="calendar"></div>
+  </div>
+  
+  <div class="contacto-form">
     <h2>Contacto</h2>
-    <form id="contact-form">
+    <form id="contacto-formulario" class="contact-form">
       <label for="nombre">Nombre</label>
       <input type="text" id="nombre" name="nombre" required />
-  
+
       <label for="email">Email</label>
       <input type="email" id="email" name="email" required />
-  
+
       <label for="mensaje">Mensaje</label>
       <textarea id="mensaje" name="mensaje" required></textarea>
-  
+
       <button type="submit">Enviar</button>
     </form>
-  </section>
+  </div>
+</section>
 
-  <!-- CALENDARIO -->
-  <section id="calendario" class="section">
-    <h2>Agenda tu cita</h2>
-    <div id="calendar"></div>
-  </section>
 
   <!-- DETALLES DE ESPECIALIDADES -->
   <section id="resumenes" class="section resumenes">
@@ -114,7 +116,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Lic. Nombre Apellido - Psicóloga. Todos los derechos reservados.</p>
+    <p>&copy; 2025 Lic. Sofia Derobertis - Psicóloga. Todos los derechos reservados.</p>
     <p>
       <a href="https://instagram.com/brujulaenviaje_ovo" target="_blank" class="instagram-link">
         <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="instagram-icon" />@brujulaenviaje_ovo
@@ -130,15 +132,15 @@
     })();
   </script>
 
+  <!-- Formulario envío -->
   <script>
-    // Escuchar el envío del formulario
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
+    document.getElementById('contacto-formulario').addEventListener('submit', function(e) {
       e.preventDefault();
 
       emailjs.sendForm('service_jnz000b', 'template_lci4mmq', this)
         .then(function() {
           alert('Mensaje enviado con éxito');
-          document.getElementById('contact-form').reset();
+          document.getElementById('contacto-formulario').reset();
         }, function(error) {
           alert('Error al enviar el mensaje. Intentalo nuevamente.');
           console.log('FAILED...', error);
@@ -146,20 +148,22 @@
     });
   </script>
 
-  <!-- Inicialización de FullCalendar -->
+  <!-- Inicialización del calendario -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       var calendarEl = document.getElementById('calendar');
       var calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
-        events: [
-          {
-            
-          },
-          {
-            
-          }
-        ]
+        selectable: true,
+        dateClick: function(info) {
+          alert('Seleccionaste la fecha: ' + info.dateStr);
+  
+        },
+        dateClick: function(info) {
+          alert('Seleccionaste la fecha: ' + info.dateStr);
+          document.getElementById('fechaSeleccionada').value = info.dateStr;
+        },  
+        events: [] // Podés agregar tus eventos aquí
       });
       calendar.render();
     });
