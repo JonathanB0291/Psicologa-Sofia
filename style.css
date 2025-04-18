@@ -416,16 +416,22 @@ footer {
 
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
-    flex-direction: right;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: #fff;
+    display: none; /* Oculta el menú por defecto */
+    flex-direction: column;
+    gap: 15px;
     position: absolute;
     top: 60px;
     right: 0;
-    width: 200px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  .menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block; /* Muestra el icono hamburguesa solo en móviles */
   }
 
   .nav-links.show {
