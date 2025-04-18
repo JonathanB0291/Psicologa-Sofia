@@ -82,6 +82,22 @@ a {
   color: inherit;
   transition: color 0.3s;
 }
+.menu-toggle {
+  display: none; /* Oculta el checkbox */
+}
+
+.hamburger {
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  display: none; /* El icono de la hamburguesa solo aparece en pantallas pequeñas */
+}
+
+.nav-links {
+  display: flex;
+}
 
 
 .about-container {
