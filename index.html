@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lic. Sofia Derobertis - Psicóloga</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 
   <!-- FullCalendar CSS -->
@@ -16,102 +19,166 @@
 
   <!-- NAVBAR -->
   <header>
-    <a href="#inicio"><h1 class="logo">Lic. Sofia Derobertis</h1></a>
+    <a href="index.html">
+      <img src="imagenes/escribir.jpeg" alt="Logo" class="logo-navbar">
+    </a>
     <nav>
       <ul>
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#especialidades">Especialidades</a></li>
+        <li><a href="#servicios">Servicios</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- HERO / PRESENTACIÓN -->
-  <section id="inicio" class="hero">
-    <div class="hero-content">
-      <h2>Espacio analítico de exploración y construcción de tu proyecto más importante.</h2> 
-      <h2>VOS MISMO</h2>
-    </div>
-  </section>
-
-  <!-- SOBRE MÍ -->
-  <section id="sobre-mi" class="section about">
-    <h2>Sobre mí</h2>
-    <p>Soy psicologa MP 356 diplomada en orientación vocacional y ocupacional.
-      <br>Actualmente trabajo en modalidad virtual con orientación psicoanalítica atendiendo a jóvenes y adultos. 
-      <br>Hace un año y dos meses me encuentro viviendo en Portugal🌎.
-      <br>Me di el lugar de frenar y disfrutar de lo simple para apostar a mis proyectos. Dejé a un costado el piloto automático en el que andaba y me dispuse a vivir sin tanta prisa y más consciente de lo que quiero y adónde quiero estar..</p>
-  </section>
-
-  <!-- ESPECIALIDADES -->
-  <section id="especialidades" class="section specialties">
-    <h2>Experiencia Laboral</h2>
-    <div class="cards">
-      <a href="#ansiedad" class="card">
-        <h3>Clinica con niños y adolescentes</h3>
-      </a>
-      <a href="#duelo" class="card">
-        <h3>Clinica con jovenes y adultos</h3>
-      </a>
-      <a href="#online" class="card">
-        <h3>Orientación y Re-Orientacion vocacional </h3>
-      </a>
-      <a href="#autoestima" class="card">
-        <h3>Orientacion a padres</h3>
-      </a>
-    </div>
-  </section>
-
-  <!-- CALENDARIO y FORMULARIO -->
-<section id="calendario" class="section calendario-citas">
-  <div class="calendario-wrapper">
-    <h2>Elegí el mejor momento para tu sesión</h2>
-    <p class="calendario-subtext">Reservá tu cita con anticipación. Elegí la fecha y hora que mejor se adapte a vos.</p>
-    <div id="calendar"></div>
-  </div>
+    <section id="inicio" class="hero solo-foto"></section>
   
-  <div class="contacto-form">
-    <h2>Contacto</h2>
-    <form id="contacto-formulario" class="contact-form">
-      <label for="nombre">Nombre</label>
-      <input type="text" id="nombre" name="nombre" required />
+  
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="mensaje">Mensaje</label>
-      <textarea id="mensaje" name="mensaje" required></textarea>
-
-      <button type="submit">Enviar</button>
-    </form>
+<!-- SOBRE MÍ -->
+<section id="sobre-mi" class="section about">
+  <h2 class="section-title">Sobre mí</h2>
+  <div class="about-container">
+    <div class="about-text">
+      <p>
+        Soy psicóloga, diplomada en orientación vocacional y ocupacional, con formación en Psicología Organizacional. <br>
+        Actualmente trabajo en modalidad virtual, acompañando a jóvenes y adultos desde una perspectiva psicoanalítica. <br>
+        Cuento con experiencia en el trabajo con niños, adolescentes y orientación a padres, tanto en ámbito privado como institucional.
+        Además, formé parte del cuerpo docente en el IUCS Fundación H. A. Barceló, en las cátedras de psicología laboral e institucional. 
+        Esta etapa me brindó la grata oportunidad de acompañar a los estudiantes en sus prácticas pre-profesionales como referente. <br>🌎 <br>
+        Desde febrero de 2024 vivo en Portugal, una decisión que marcó un cambio importante en mi historia. Me permití pausar el ritmo acelerado en el que vivía, 
+        reconectar con lo simple, me dispuse a vivir más consciente de lo que quiero y hacia donde, encauzando mi deseo. <br>
+        Desde entonces empecé a incursionar en el mundo IT como sourcing y recruiter, labor que me desafía y entusiasma.
+      </p>
+    </div>
+    <div class="about-img">
+      <img src="imagenes/toca hoja.jpeg" alt="Sofía Derobertis" />
+    </div>
   </div>
 </section>
 
 
-  <!-- DETALLES DE ESPECIALIDADES -->
-  <section id="resumenes" class="section resumenes">
-    <h2>Más sobre cada especialidad</h2>
 
-    <div id="ansiedad">
-      <h3>Ansiedad</h3>
-      <p>La ansiedad es una respuesta natural del cuerpo, pero cuando interfiere en tu vida cotidiana, es importante aprender a gestionarla. En consulta trabajamos técnicas de respiración, manejo del pensamiento y hábitos saludables para mejorar tu bienestar.</p>
+  <section id="galeria" class="section galeria">
+    <h2 class="section-title">Mi espacio de trabajo</h2>
+    <div class="galeria-grid">
+      <img src="imagenes/escribir.jpeg" alt="Espacio 1">
+      <img src="imagenes/video.jpeg" alt="Espacio 2">
+      <img src="imagenes/libreta.jpeg" alt="Espacio 3">
     </div>
+  </section>
 
-    <div id="autoestima">
-      <h3>Autoestima</h3>
-      <p>La baja autoestima puede afectar tus decisiones, relaciones y emociones. En el proceso terapéutico abordamos tus creencias, desarrollamos autoconocimiento y reforzamos la autovaloración.</p>
+  <!-- ESPECIALIDADES -->
+  <section id="servicios" class="section specialties">
+    <h2 class="section-title">Servicios</h2>
+    <div class="cards">
+      <a href="#clinica" class="card">
+        <h3>Atencion clinica a jovenes y adultos  </h3>
+      </a>
+      <a href="#orientacion" class="card">
+        <h3>Orientación vocacional y ocupacional </h3>
+      </a>
+      <a href="#recruiterIT" class="card">
+        <h3>Sourcing y Recruiter IT</h3>
+      </a>
     </div>
+  </section>
 
-    <div id="duelo">
-      <h3>Duelo</h3>
-      <p>El duelo no sólo es por la pérdida de un ser querido, también puede ser por una separación, cambio o pérdida de salud. Brindo un espacio para expresar emociones y encontrar sentido en tu experiencia.</p>
-    </div>
+    <!-- DETALLES DE ESPECIALIDADES -->
+    <section id="servicios" class="section resumenes">
+      <div class="resumenes-container">
+        <div id="clinica" class="resumen-card">
+          <h3>🧠 Atención clínica a jóvenes y adultos</h3>
+          <p>
+            Trabajo desde un enfoque psicoanalítico, con una mirada ética y orientada hacia la escucha. Acompañando sintomatologías, 
+            escuchando y enfatizando en lo que hay detrás de ello, dando lugar a la pregunta por tu existencia y deseo, a tus angustias, 
+            sufrimientos, malestares, miedos, alegrías, logros, satisfacciones.
+            <br><br>
+            Acompañar a pensar, re-pensarse y re-escribir tu historia, dando lugar a un espacio propio y seguro, donde la subjetividad se ponga a hablar.
+            <strong>Te animo a que inicies y pruebes hacer de un espacio, el propio.</strong>
+          </p>
+        </div>
+    
+        <div id="orientacion" class="resumen-card">
+          <h3>🎯 Orientación vocacional y ocupacional</h3>
+          <p>
+            Espacio para acompañarte en el proceso de explorar y construir tu proyecto de vida.
+            Vas a adquirir herramientas que te ayudarán a clarificar y orientar tu camino, para que puedas tomar decisiones posibles de habitar.
+            <br><br>
+            Los proyectos de vida se construyen y transforman a medida que creces, mientras transitas y seguís escribiendo tu historia.
+            Estoy aquí para acompañarte a reflexionarlo, pensarlo y crearlo.
+            <br><br>
+            <strong>El proceso se organiza en 3 momentos:</strong>
+            <br>🧩 Autoconocimiento
+            <br>🧩 Exploración de la información
+            <br>🧩 Imaginar y crear tu Proyecto de vida
+            <br><br>
+            También exploramos:
+            <br>🌈 Gustos, intereses y motivaciones
+            <br>✔️ Factores que influyen en tus decisiones
+            <br>🌈 Abanico de posibilidades
+            <br>✔️ Información disponible
+            <br>🌈 Metas y objetivos
+          </p>
+        </div>
+    
+        <div id="recruiterIT" class="resumen-card">
+          <h3>💻 Sourcing y Recruiter IT</h3>
+          <p>
+            Búsqueda de candidatos que puedan matchear con la vacante. 
+            Cuento con una base de datos constantemente actualizada de perfiles IT y realizo el contacto inicial con el posible candidato. 
+            <br><br>
+            Me encargo del screening y entrevistas para evaluar el potencial de cada perfil.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <div id="online">
-      <h3>Terapia Online</h3>
-      <p>La modalidad online te permite acceder al espacio terapéutico desde donde estés, con la misma calidez, confidencialidad y compromiso que en la terapia presencial. Ideal para quienes buscan flexibilidad horaria.</p>
+    
+ <!-- CALENDARIO y FORMULARIO -->
+<section id="calendario" class="section calendario-citas">
+  <h2 id="contacto" class="section-title">Contacto</h2> 
+
+    <div class="contacto-form">
+      <form id="contacto-formulario" class="contact-form">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" required placeholder="Escribe brevemente el motivo de tu consulta..."></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
     </div>
+  </div>
+</section>
+
+
+<!-- FLATPICKR: CSS y Script -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+  flatpickr("#calendar-input", {
+    enableTime: true,
+    dateFormat: "d-m-Y H:i",
+    minDate: "today",
+    locale: {
+      firstDayOfWeek: 1
+    }
+  });
+</script>
+
+  
+  <section id="contacto" class="section contacto-directo">
+    <h2>Datos de contacto</h2>
+    <p>📧 Email: <a href="mailto:sofia.derobertis@gmail.com">sofia.derobertis@gmail.com</a></p>
+    <p>📱 WhatsApp: <a href="https://wa.me/3510000000" target="_blank">+351 000 000 000</a></p>
+    <p>🌐 Instagram: <a href="https://instagram.com/brujulaenviaje_ovo" target="_blank">@brujulaenviaje_ovo</a></p>
   </section>
 
   <!-- FOOTER -->
@@ -170,4 +237,10 @@
   </script>
 
 </body>
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/5491123456789?text=Hola%2C%20quiero%20hacer%20una%20consulta%20sobre%20una%20sesión." class="whatsapp-float" target="_blank" aria-label="Chatear por WhatsApp">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="whatsapp-icon" />
+</a>
+
+
 </html>
