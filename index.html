@@ -22,20 +22,24 @@
     <a href="index.html">
       <img src="imagenes/escribir.jpeg" alt="Logo" class="logo-navbar">
     </a>
-    <nav>
+  
+    <button class="menu-toggle" id="menu-toggle">
+      ☰
+    </button>
+  
+    <nav id="navbar">
       <ul>
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#especialidades">Especialidades</a></li>
+        <li><a href="#calendario">Turnos y Contacto</a></li>
       </ul>
     </nav>
   </header>
+  
 
   <!-- HERO / PRESENTACIÓN -->
     <section id="inicio" class="hero solo-foto"></section>
-  
-  
 
 <!-- SOBRE MÍ -->
 <section id="sobre-mi" class="section about">
@@ -235,6 +239,16 @@
       calendar.render();
     });
   </script>
+
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const nav = document.querySelector('nav ul');
+
+  toggleBtn.addEventListener('click', () => {
+    nav.classList.toggle('show');
+  });
+</script>
+
 
 </body>
 <!-- Botón flotante de WhatsApp -->
